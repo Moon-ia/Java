@@ -1,0 +1,67 @@
+package paquete1;
+
+class Clase1 {//CLASE
+    //modificadores de acceso y a que aplica cada uno
+    /*
+    public: clase, variable, metodo, constructor
+    protected: variable, metodo, constructor
+    default/package: clase, var, met, cons
+    private: var, met, cons
+    */
+    
+    public String atributoPublico = "Valor atributo publico";//VARIABLE
+    
+    protected String atributoProtected = "Valor atributo protected";//VARIABLE
+    //solo se puede acceder desde aca, otras clases no pueden
+    
+    String atributoDefault = "Valor atributo default";
+    
+    private String atributoPrivado = "Valor atributo privado";
+    //no se puede modificar desde ninguna clase, ni estando en el mismo paquete. hay que usar get y set   
+    
+    
+    public Clase1(String arg){//CONSTRUCTOR
+        this();
+        System.out.println("Constructor Publico");
+    }
+    //public void metodoPublico(){//METODO
+    //    System.out.println("Metodo publico");
+    //}
+    
+    
+    //protected Clase1(){//CONSTRUCTOR 
+        //solo se puede usar en clases hijas
+        //System.out.println("Constructor protected");
+    //}
+    //protected void metodoProtected(){//METODO
+        //solo la clase donde se encuentra puede acceder a ellos
+        //System.out.println("Metodo protected");
+    //}
+    
+    
+    //Clase1(){// CONSTRUCTOR
+        //System.out.println("Constructor default");
+    //}
+    //void metodoDefault(){
+        //System.out.println("Metodo default");
+    //}
+    
+    
+    private Clase1(){
+        System.out.println("Constructor privado");
+    }
+    
+    private void metodoPrivate(){
+        System.out.println("Metodo privado");
+    }
+
+    public String getAtributoPrivado() {
+        return atributoPrivado;
+    }
+
+    public void setAtributoPrivado(String atributoPrivado) {
+        this.atributoPrivado = atributoPrivado;
+    }
+    
+    
+}
