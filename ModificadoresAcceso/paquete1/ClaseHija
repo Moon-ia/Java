@@ -1,0 +1,20 @@
+package paquete1;
+
+import paquete1.Clase1;
+
+class ClaseHija extends Clase1{
+//si o si hay que poner extends para acceder a la clase1(clase padre), desde la claseHija
+//no podemos usar una clase default fuera de los paquetes
+    
+    public ClaseHija(){
+        super("Publico");
+//        this.atributoProtected = "Modificacion atributo protected";
+//        System.out.println("atributoProtegido = " + this.atributoProtected);
+//        this.metodoProtected();
+//        super();//solo con super podemos usar el constructor protegido
+//        this.atributoDefault = "modificacion atributo default";
+//        System.out.println("atributoDefault = " + this.atributoDefault);
+//        this.metodoDefault();
+        
+    }
+}
