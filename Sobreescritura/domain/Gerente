@@ -1,0 +1,15 @@
+package domain;
+
+public class Gerente extends Empleado{
+    
+    private String departamento;
+    
+    public Gerente(String nombre, double sueldo, String departamento){
+        super(nombre, sueldo);//con super podemos acceder a la clse padre
+        this.departamento = departamento;
+    }
+    @Override//esto seria la sobre escritura, agregar elementos que la clase padre no tiene
+    public String obtenerDetalles(){//modif de acces puede ser menos restrictivo, pero nunca más restrictivo
+        return super.obtenerDetalles() + ", departamento: " + this.departamento;
+    }
+}
