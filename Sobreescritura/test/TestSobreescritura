@@ -1,0 +1,24 @@
+package test;
+
+import domain.*;
+
+public class TestSobreescritura {
+    public static void main(String[] args) {
+        Empleado empleado = new Empleado("Juan", 5000);
+        //System.out.println("empleado = " + empleado.obtenerDetalles());
+        imprimir(empleado);
+        
+        Gerente gerente = new Gerente("Juan", 1000, "Contabilidad");
+        //System.out.println("gerente = " + gerente.obtenerDetalles());
+        imprimir(gerente);
+    }
+    
+    public static void imprimir(Empleado empleado){
+        System.out.println("empleado = " + empleado.obtenerDetalles());
+    }
+}
+/*
+polimorfismo es poder ejecutar con el mismo tipo distintos metodos de diferentes tipos por
+ejemplo de clase padre o clase hija
+multiples formas en la misma ejecucion
+*/
