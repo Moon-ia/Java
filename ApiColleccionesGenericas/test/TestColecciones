@@ -1,0 +1,57 @@
+package test;
+
+import java.util.*;
+
+public class TestColecciones {
+    public static void main(String[] args) {
+        //guarda un orden y muestra elemetos duplicados
+        List<String> miLista = new ArrayList();
+        miLista.add("Lunes");
+        miLista.add("Martes");
+        miLista.add("Miercoles");
+        miLista.add("Jueves");
+        miLista.add("Viernes");
+        String elemento = miLista.get(0);
+        //System.out.println("elemento = " + elemento);
+        //imprimir(miLista);
+        
+        
+        //set no tiene un orden al mostrar y no muestra elementos duplicados
+        Set<String> miSet = new HashSet<>();
+        miSet.add("Lunes");
+        miSet.add("Martes");
+        miSet.add("Miercoles");
+        miSet.add("Jueves");
+        miSet.add("Viernes");
+        //imprimir(miSet);
+        
+        Map<String, String> miMapa = new HashMap<>();
+        miMapa.put("Valor1", "Juan");
+        miMapa.put("Valor2", "Karla");
+        miMapa.put("Valor3", "Rosario");
+        miMapa.put("Valor3", "Carlos");
+        //el valor3 se reescribe con el ultimo valor
+        
+        String elementoMapa = miMapa.get("Valor1");
+        //System.out.println("elemento = " + elemento);
+        
+        //para mostrar una sola llave
+        //String elemento = (String) miMapa.get("Valo1");
+        //System.out.println("elemento = " + elemento);
+        //para mostrar todas las llaves
+        imprimir(miMapa.keySet());
+        //para mostrar todos los valores
+        imprimir(miMapa.values());
+        
+    }
+    
+    //aplicando polimorfismo, para evitar escribir siempre lo mismo para mostrar
+    public static void imprimir(Collection<String> coleccion){
+        coleccion.forEach(elemento -> {
+            System.out.println("elemento = " + elemento);
+        });
+        //for(Object elemento: coleccion){
+        //    System.out.println("elemento = " + elemento);
+        //}
+    }
+}
